@@ -1,9 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import HomeScreen from './components/HomeScreen';
-import MenuScreen from './components/MenuScreen';
+import HomeScreen from './screens/HomeScreen';
+import MenuScreen from './screens/MenuScreen';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NavigationContainer } from '@react-navigation/native';
+import Header from './components/Header';
+import { ConsultScreen } from './screens/ConsultScreen';
+import { RegisterScreen } from './screens/RegisterScreen';
 
 
 export default function App() {
@@ -13,9 +16,12 @@ export default function App() {
   return (
 
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='Home'>
-        <Stack.Screen name='Home' component={HomeScreen} options={{ headerShown: false }}/>
+        {/* <Header /> */}
+      <Stack.Navigator initialRouteName='Home' screenOptions={{ headerShown: false }}>
+        <Stack.Screen name='Home' component={HomeScreen} />
         <Stack.Screen name='Menu' component={MenuScreen} />
+        <Stack.Screen name='ConsultScreen' component={ConsultScreen} />
+        <Stack.Screen name='RegisterScreen' component={RegisterScreen} />
       </Stack.Navigator>
     </NavigationContainer>
     // <HomeScreen />

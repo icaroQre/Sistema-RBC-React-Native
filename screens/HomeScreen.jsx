@@ -1,7 +1,6 @@
-import { StyleSheet, Text, View, ImageBackground, Image, Button, } from 'react-native';
+import { StyleSheet, Text, View, ImageBackground, Image, } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
-import { Dimensions } from 'react-native';
-import HomeButton from './Button'
+import HomeButton from '../components/Button'
 
 const backgound = '../assets/images/home-image.jpg'
 const logo = '../assets/icons/logo-white.png'
@@ -9,7 +8,6 @@ const logo = '../assets/icons/logo-white.png'
 export default function HomeScreen ({ navigation }) {
 
     const nextScreen = () => {
-        console.log('Trocar de tela');
         navigation.navigate('Menu')
     }
 
@@ -51,16 +49,15 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
     },
-    log: {
-        width: '160px',
-        position: 'absolute',
+    logo: {
+        width: 160,
     },
     textPrimary: {
       color: '#F5F5F5',
       fontSize: 22,
       textAlign: 'center',
       fontWeight: '500',
-      marginTop: 200,
+      marginTop: 220,
       marginHorizontal: 40,
       marginBottom: 36,
       maxWidth: 350,
